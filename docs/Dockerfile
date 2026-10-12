@@ -18,6 +18,6 @@ RUN php composer-setup.php --version=2.9.0 --install-dir=/usr/local/bin --filena
 # ---- FIX ENDS HERE ----
 
 # Continue your other steps
-RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
 RUN apt-get install -y -qq nodejs
 #RUN npm install && npm run build

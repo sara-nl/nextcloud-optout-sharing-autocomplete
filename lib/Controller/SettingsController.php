@@ -1,74 +1,66 @@
 <?php
+
+declare(strict_types=1);
+
 namespace OCA\AutocompleteSettings\Controller;
 
 use OCA\AutocompleteSettings\AppInfo\Application;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\FrontpageRoute;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\JSONResponse;
-use OCP\IConfig;
+use OCP\Config\IUserConfig;
 use OCP\IRequest;
 use OCP\IUserSession;
 
 class SettingsController extends Controller {
-    protected $config;
-    protected $appName;
-    protected $userSession;
+	public function __construct(
+		string $appName,
+		IRequest $request,
+		private readonly IUserConfig $userConfig,
+		private readonly IUserSession $userSession,
+	) {
+		parent::__construct($appName, $request);
+	}
 
-    public function __construct(
-        $appName,
-        IRequest $request,
-        IConfig $config,
-        IUserSession $userSession
-    ) {
-        parent::__construct($appName, $request);
-        $this->config = $config;
-        $this->appName = $appName;
-        $this->userSession = $userSession;
-    }
+	#[NoAdminRequired]
+	#[FrontpageRoute(verb: 'GET', url: '/settings/preference')]
+	public function getPreference(): JSONResponse {
+		$user = $this->userSession->getUser();
+		if ($user === null) {
+			return new JSONResponse(['error' => 'User not logged in'], Http::STATUS_UNAUTHORIZED);
+		}
 
-    /**
-     * @NoAdminRequired
-     */
-    public function getPreference(): JSONResponse {
-        $user = $this->userSession->getUser();
-        if (!$user) {
-            return new JSONResponse(['error' => 'User not logged in'], 401);
-        }
+		$value = $this->userConfig->getValueBool(
+			$user->getUID(),
+			Application::PREFERENCE_APP,
+			Application::PREFERENCE_KEY,
+		);
 
-        $userId = $user->getUID();
+		return new JSONResponse([
+			'value' => $value,
+		]);
+	}
 
-        $value = $this->config->getUserValue(
-            $userId,
-            'files_sharing',
-            'exclude_user_from_autocomplete',
-            'false'
-        );
+	#[NoAdminRequired]
+	#[FrontpageRoute(verb: 'POST', url: '/settings/preference')]
+	public function setPreference(bool $value): JSONResponse {
+		$user = $this->userSession->getUser();
+		if ($user === null) {
+			return new JSONResponse(['error' => 'User not logged in'], Http::STATUS_UNAUTHORIZED);
+		}
 
-        return new JSONResponse([
-            'value' => $value === 'true'
-        ]);
-    }
+		$this->userConfig->setValueBool(
+			$user->getUID(),
+			Application::PREFERENCE_APP,
+			Application::PREFERENCE_KEY,
+			$value,
+		);
 
-    /**
-     * @NoAdminRequired
-     */
-    public function setPreference(bool $value): JSONResponse {
-        $user = $this->userSession->getUser();
-        if (!$user) {
-            return new JSONResponse(['error' => 'User not logged in'], 401);
-        }
-
-        $userId = $user->getUID();
-
-        $this->config->setUserValue(
-            $userId,
-            'files_sharing',
-            'exclude_user_from_autocomplete',
-            $value ? 'true' : 'false'
-        );
-
-        return new JSONResponse([
-            'success' => true,
-            'value' => $value
-        ]);
-    }
+		return new JSONResponse([
+			'success' => true,
+			'value' => $value,
+		]);
+	}
 }

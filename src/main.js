@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
 import { translate, translatePlural } from '@nextcloud/l10n'
+import { createApp } from 'vue'
 import AutocompleteSettings from './AutocompleteSettings.vue'
 
 const app = createApp(AutocompleteSettings)
