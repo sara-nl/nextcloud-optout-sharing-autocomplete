@@ -5,7 +5,7 @@
     <name>Autocomplete Settings</name>
     <summary>Allow users to opt-out from autocomplete suggestions</summary>
     <description><![CDATA[This app allows users to hide themselves from autocomplete suggestions, for example when other users share files or folders or mention someone in a comment. Users can still be found by typing their exact username.]]></description>
-    <version>1.0.1</version>
+    <version>2.0.0</version>
     <licence>agpl</licence>
     <author>Tom Wezepoel</author>
     <namespace>AutocompleteSettings</namespace>
