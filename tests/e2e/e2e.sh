@@ -68,6 +68,12 @@ script_status() { # <script name> [extension]
 }
 
 # --- setup ---------------------------------------------------------------
+# Right after "occ app:enable" the web server can still use its cached list of enabled apps for a few seconds,
+# so wait until the app's route exists instead of 404 (it answers 401 without a login)
+for _ in $(seq 1 60); do
+	[ "$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/index.php/apps/autocomplete_settings/settings/preference")" != 404 ] && break
+	sleep 1
+done
 occ group:add $G >/dev/null 2>&1
 for u in $A $B $C; do
 	occ user:add --password-from-env --display-name="$u" --group=$G $u >/dev/null 2>&1 || occ user:resetpassword --password-from-env $u >/dev/null
