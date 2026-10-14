@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Autocomplete Settings contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # --- Build stage ------------------------------------------------------------
 FROM php:8.2-cli AS builder
 

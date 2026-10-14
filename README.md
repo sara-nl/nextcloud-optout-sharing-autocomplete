@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2025 Autocomplete Settings contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Nextcloud Opt Out for Share AutoComplete
 
 This app allow users to opt-out of autocomplete, where some users do not want to be found via autocomplete suggestions.

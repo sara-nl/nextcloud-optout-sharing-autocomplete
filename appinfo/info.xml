@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+<!--
+  - SPDX-FileCopyrightText: 2025 Autocomplete Settings contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 <info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>autocomplete_settings</id>
@@ -6,7 +10,7 @@
     <summary>Allow users to opt-out from autocomplete suggestions</summary>
     <description><![CDATA[This app allows users to hide themselves from autocomplete suggestions, for example when other users share files or folders or mention someone in a comment. Users can still be found by typing their exact username.]]></description>
     <version>2.0.0</version>
-    <licence>agpl</licence>
+    <licence>AGPL-3.0-or-later</licence>
     <author>Tom Wezepoel</author>
     <namespace>AutocompleteSettings</namespace>
     <category>tools</category>

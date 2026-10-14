@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: Bernhard Posselt <dev@bernhard-posselt.com>
+# SPDX-FileCopyrightText: 2025 Autocomplete Settings contributors
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 # Generic Makefile for building and packaging a Nextcloud app which uses npm and
@@ -190,6 +191,7 @@ buildapp:
 	--exclude="$(app_name)/build" \
 	--exclude="$(app_name)/tests" \
 	--exclude="$(app_name)/src" \
+	--exclude="$(app_name)/REUSE.toml" \
 	--exclude="$(app_name)/vite.config.js" \
 	--exclude="$(app_name)/eslint.config.js" \
 	--exclude="$(app_name)/stylelint.config.js" \

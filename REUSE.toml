@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2026 Autocomplete Settings contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+version = 1
+SPDX-PackageName = "autocomplete_settings"
+SPDX-PackageSupplier = "Autocomplete Settings contributors"
+SPDX-PackageDownloadLocation = "https://github.com/sara-nl/nextcloud-optout-sharing-autocomplete"
+
+# Files that cannot carry a comment
+[[annotations]]
+path = ["composer.json", "composer.lock", "package.json", "package-lock.json", "docs/*.png"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Autocomplete Settings contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
