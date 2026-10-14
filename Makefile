@@ -191,6 +191,7 @@ buildapp:
 	--exclude="$(app_name)/build" \
 	--exclude="$(app_name)/tests" \
 	--exclude="$(app_name)/src" \
+	--exclude="$(app_name)/docs" \
 	--exclude="$(app_name)/REUSE.toml" \
 	--exclude="$(app_name)/vite.config.js" \
 	--exclude="$(app_name)/eslint.config.js" \
