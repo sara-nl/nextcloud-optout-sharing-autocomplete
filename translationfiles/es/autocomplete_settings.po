@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud autocomplete_settings\n"
+"PO-Revision-Date: 2026-10-14 12:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+msgid "Autocomplete Settings"
+msgstr "Ajustes de autocompletado"
+
+msgid "Allow users to opt-out from autocomplete suggestions"
+msgstr ""
+"Permite a los usuarios no aparecer en las sugerencias de autocompletado"
+
+msgid ""
+"This app allows users to hide themselves from autocomplete suggestions, for example when other users share files or folders or mention someone in a comment. Users can still be found by typing their exact username."
+msgstr ""
+"Esta aplicación permite a los usuarios ocultarse de las sugerencias de autocompletado, por ejemplo cuando otros usuarios comparten archivos o carpetas o mencionan a alguien en un comentario. Los usuarios todavía se pueden encontrar escribiendo su nombre de usuario exacto."
+
+msgid "Autocomplete preference updated"
+msgstr "Preferencia de autocompletado actualizada"
+
+msgid "Failed to save preference. Please try again."
+msgstr "No se pudo guardar la preferencia. Inténtalo de nuevo."
+
+msgid "Failed to save autocomplete preference"
+msgstr "No se pudo guardar la preferencia de autocompletado"
+
+msgid "Autocomplete visibility"
+msgstr "Visibilidad en el autocompletado"
+
+msgid "Control your visibility in autocomplete suggestions"
+msgstr "Controla tu visibilidad en las sugerencias de autocompletado"
+
+msgid "Hide from autocomplete suggestions"
+msgstr "Ocultar en las sugerencias de autocompletado"
+
+msgid ""
+"When enabled, your account will not appear in autocomplete suggestions, for example when other users share files or folders or mention someone in a comment. Users can still find you by typing your exact username."
+msgstr ""
+"Si está activado, tu cuenta no aparecerá en las sugerencias de autocompletado, por ejemplo cuando otros usuarios comparten archivos o carpetas o mencionan a alguien en un comentario. Los demás todavía pueden encontrarte escribiendo tu nombre de usuario exacto."
+
+msgid "Saving…"
+msgstr "Guardando…"
+

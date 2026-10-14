@@ -24,6 +24,19 @@ The app registers a collaborator search plugin (see `appinfo/info.xml`) that run
 and removes opted-out users from the partial matches. Exact matches are kept.
 This applies to every feature that uses the Nextcloud collaborator search, such as the share dialog and @mentions in comments.
 
+### Translations
+
+The app is translated into Dutch, German (informal and formal), French and Spanish.
+The translations are kept in `translationfiles/<language>/autocomplete_settings.po`, Nextcloud reads the generated files in `l10n/`.
+After changing texts, update them with the [translation tool](https://github.com/nextcloud/docker-ci/tree/master/translations/translationtool):
+
+```
+php translationtool.phar create-pot-files
+msgmerge --update translationfiles/nl/autocomplete_settings.po translationfiles/templates/autocomplete_settings.pot
+# translate the new or changed texts, for example with Poedit, for every language
+php translationtool.phar convert-po-files
+```
+
 ### Releasing
 
 Releases are published to the [Nextcloud App Store](https://apps.nextcloud.com/apps/autocomplete_settings) by the Release workflow:

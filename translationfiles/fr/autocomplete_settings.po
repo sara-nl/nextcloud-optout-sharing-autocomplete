@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud autocomplete_settings\n"
+"PO-Revision-Date: 2026-10-14 12:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+msgid "Autocomplete Settings"
+msgstr "Paramètres d’autocomplétion"
+
+msgid "Allow users to opt-out from autocomplete suggestions"
+msgstr ""
+"Permettre aux utilisateurs de ne pas apparaître dans les suggestions d’autocomplétion"
+
+msgid ""
+"This app allows users to hide themselves from autocomplete suggestions, for example when other users share files or folders or mention someone in a comment. Users can still be found by typing their exact username."
+msgstr ""
+"Cette application permet aux utilisateurs de ne pas apparaître dans les suggestions d’autocomplétion, par exemple lorsque d’autres utilisateurs partagent des fichiers ou des dossiers ou mentionnent quelqu’un dans un commentaire. Les utilisateurs peuvent toujours être trouvés en saisissant leur nom d’utilisateur exact."
+
+msgid "Autocomplete preference updated"
+msgstr "Préférence d’autocomplétion mise à jour"
+
+msgid "Failed to save preference. Please try again."
+msgstr "Échec de l’enregistrement de la préférence. Veuillez réessayer."
+
+msgid "Failed to save autocomplete preference"
+msgstr "Échec de l’enregistrement de la préférence d’autocomplétion"
+
+msgid "Autocomplete visibility"
+msgstr "Visibilité dans l’autocomplétion"
+
+msgid "Control your visibility in autocomplete suggestions"
+msgstr "Contrôlez votre visibilité dans les suggestions d’autocomplétion"
+
+msgid "Hide from autocomplete suggestions"
+msgstr "Masquer dans les suggestions d’autocomplétion"
+
+msgid ""
+"When enabled, your account will not appear in autocomplete suggestions, for example when other users share files or folders or mention someone in a comment. Users can still find you by typing your exact username."
+msgstr ""
+"Lorsque cette option est activée, votre compte n’apparaît pas dans les suggestions d’autocomplétion, par exemple lorsque d’autres utilisateurs partagent des fichiers ou des dossiers ou mentionnent quelqu’un dans un commentaire. Les autres peuvent toujours vous trouver en saisissant votre nom d’utilisateur exact."
+
+msgid "Saving…"
+msgstr "Enregistrement…"
+

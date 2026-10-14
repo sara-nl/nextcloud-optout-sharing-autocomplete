@@ -1,0 +1,16 @@
+OC.L10N.register(
+    "autocomplete_settings",
+    {
+    "Autocomplete Settings" : "Paramètres d’autocomplétion",
+    "Allow users to opt-out from autocomplete suggestions" : "Permettre aux utilisateurs de ne pas apparaître dans les suggestions d’autocomplétion",
+    "This app allows users to hide themselves from autocomplete suggestions, for example when other users share files or folders or mention someone in a comment. Users can still be found by typing their exact username." : "Cette application permet aux utilisateurs de ne pas apparaître dans les suggestions d’autocomplétion, par exemple lorsque d’autres utilisateurs partagent des fichiers ou des dossiers ou mentionnent quelqu’un dans un commentaire. Les utilisateurs peuvent toujours être trouvés en saisissant leur nom d’utilisateur exact.",
+    "Autocomplete preference updated" : "Préférence d’autocomplétion mise à jour",
+    "Failed to save preference. Please try again." : "Échec de l’enregistrement de la préférence. Veuillez réessayer.",
+    "Failed to save autocomplete preference" : "Échec de l’enregistrement de la préférence d’autocomplétion",
+    "Autocomplete visibility" : "Visibilité dans l’autocomplétion",
+    "Control your visibility in autocomplete suggestions" : "Contrôlez votre visibilité dans les suggestions d’autocomplétion",
+    "Hide from autocomplete suggestions" : "Masquer dans les suggestions d’autocomplétion",
+    "When enabled, your account will not appear in autocomplete suggestions, for example when other users share files or folders or mention someone in a comment. Users can still find you by typing your exact username." : "Lorsque cette option est activée, votre compte n’apparaît pas dans les suggestions d’autocomplétion, par exemple lorsque d’autres utilisateurs partagent des fichiers ou des dossiers ou mentionnent quelqu’un dans un commentaire. Les autres peuvent toujours vous trouver en saisissant votre nom d’utilisateur exact.",
+    "Saving…" : "Enregistrement…"
+},
+"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

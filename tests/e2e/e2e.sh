@@ -61,9 +61,9 @@ initial_state() {
 	settings_page | grep -o 'id="initial-state-autocomplete_settings-exclude_user_from_autocomplete" value="[^"]*"' |
 		cut -d'"' -f4 | base64 -d 2>/dev/null
 }
-script_status() {
+script_status() { # <script name> [extension]
 	local src
-	src=$(settings_page | grep -o 'src="[^"]*autocomplete_settings-main\.mjs[^"]*"' | head -1 | cut -d'"' -f2 | sed 's/&amp;/\&/g')
+	src=$(settings_page | grep -o "src=\"[^\"]*autocomplete_settings[^\"]*$1\.${2:-mjs}[^\"]*\"" | head -1 | cut -d'"' -f2 | sed 's/&amp;/\&/g')
 	[ -n "$src" ] && curl -s -o /dev/null -w '%{http_code}' -u "$ME:$PW" "$BASE$src" || echo "no script tag"
 }
 
@@ -82,7 +82,10 @@ check "baseline: henk in @mention suggestions"               "$(has "$(mentions 
 
 # --- henk opts out through the settings page --------------------------------
 as_user $B
-check "settings page loads the app script"                   "$(script_status)" 200
+check "settings page loads the app script"                   "$(script_status autocomplete_settings-main)" 200
+occ user:setting $B core lang nl >/dev/null
+check "settings page loads the Dutch translations"           "$(script_status 'l10n/nl' js)" 200
+occ user:setting $B core lang --delete >/dev/null
 check "settings page shows the switch off"                   "$(initial_state)" false
 check "henk switches on"                                     "$(set_pref true)" '{"success":true,"value":true} 200'
 check "henk reads the preference back"                       "$(get_pref)" '{"value":true}'
