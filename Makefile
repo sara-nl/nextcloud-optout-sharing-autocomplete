@@ -192,6 +192,7 @@ buildapp:
 	--exclude="$(app_name)/tests" \
 	--exclude="$(app_name)/src" \
 	--exclude="$(app_name)/translationfiles" \
+	--exclude="$(app_name)/screenshots" \
 	--exclude="$(app_name)/docs" \
 	--exclude="$(app_name)/REUSE.toml" \
 	--exclude="$(app_name)/vite.config.js" \

@@ -7,9 +7,15 @@ SPDX-PackageDownloadLocation = "https://github.com/sara-nl/nextcloud-optout-shar
 
 # Files that cannot carry a comment
 [[annotations]]
-path = ["composer.json", "composer.lock", "package.json", "package-lock.json", "docs/*.png"]
+path = ["composer.json", "composer.lock", "package.json", "package-lock.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2025 Autocomplete Settings contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["screenshots/*.png"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Autocomplete Settings contributors"
 SPDX-License-Identifier = "AGPL-3.0-or-later"
 
 # Translations, rewritten by the translation tool. It puts a placeholder copyright line in the template,

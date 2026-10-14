@@ -8,7 +8,7 @@ This app allow users to opt-out of autocomplete, where some users do not want to
 When a user has opted out of autocomplete, they no longer show up when other users type part of their name in the share dialog or when mentioning someone in a comment.
 The full user name (or exact display name or email address) must be entered to share, or the personal address book must be consulted.
 
-![HelplinksAdminInterface.png](https://github.com/T0mWz/nextcloud-optout-sharing-autocomplete/raw/main/docs/OptOut_for_sharing_autocomplete.png)
+![The setting under Personal settings → Sharing](screenshots/settings.png)
 
 Supported Nextcloud versions: 33 – 35.
 

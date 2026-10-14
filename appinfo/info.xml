@@ -16,6 +16,8 @@
     <category>tools</category>
     <bugs>https://github.com/sara-nl/nextcloud-optout-sharing-autocomplete/issues</bugs>
     <repository type="git">https://github.com/sara-nl/nextcloud-optout-sharing-autocomplete.git</repository>
+    <screenshot>https://raw.githubusercontent.com/sara-nl/nextcloud-optout-sharing-autocomplete/main/screenshots/settings.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/sara-nl/nextcloud-optout-sharing-autocomplete/main/screenshots/share-dialog.png</screenshot>
 
     <dependencies>
         <php min-version="8.2"/>
