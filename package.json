@@ -1,6 +1,6 @@
 {
   "name": "autocomplete_settings",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Nextcloud app to control autocomplete visibility",
   "scripts": {
     "build": "vite build --mode production",

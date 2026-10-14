@@ -7,6 +7,19 @@
 All notable changes to this app are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 2.0.1 - 2026-10-14
+
+First release on the Nextcloud App Store.
+
+### Added
+
+- Translations for Dutch, German (informal and formal), French and Spanish.
+- Screenshots for the App Store.
+
+### Changed
+
+- Licence and copyright information in the REUSE format. The licence texts are in `LICENSES/`.
+
 ## 2.0.0 - 2026-10-12
 
 ### Changed
